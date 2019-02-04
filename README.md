@@ -5,7 +5,7 @@ In this challenge, participants were invited to develop proper imputation algori
 
 Specifically in DreamAI, ensemble imputation matrix is obtained from averaging results of six imputation algorithms: top 3 teams in challenge (spectroFM: Team DMIS_PTG; RegImpute: Team Jeremy Jacobsen; Birnn: Team BruinGo) and 3 baseline algorithms (KNN, missForest, ADMIN). Bootstrap aggregating (bagging) is also adopted to improve unstable estimation and accuracy of machine learning algorithms.
 
-In the output option of this function, it provides the user the flexibility to select imputation matrix from the ensemble method or each individual algorithm:
+In the output option of this function, it provides user the flexibility to select imputation matrix from the ensemble method or each individual algorithm:
  - "KNN": k nearest neighbor imputation
  - "MissForest": nonparametric Missing Value Imputation using Random Forest 
   - "ADMIN": abundance dependent missing imputation

@@ -1,17 +1,19 @@
 # Description
+To develop powerful computational tools to extract the most information from the proteome, Clinical Proteomic Tumor Analysis Consortium (CPTAC) and DREAM organization launched The NCI-CPTAC DREAM Proteogenomics Challenge in 2016, one of the subchallange: impute missing values in proteomics data given observed proteins.
 
-The function DreamAI imputes a dataset with missing values or NA's using 7 different methods: 
+In this challenge, participants were invited to develop proper imputation algorithms for proteomics data. And with their help an optimal imputation method: DreamAI was ensembled as an outcome of this challenge.
 
- - "KNN": k nearest neighbor 
- - "MissForest": nonparametric Missing Value
-   Imputation using Random Forest 
-  - "ADMIN": abundance dependent missing
-   imputation
+Specifically in DreamAI, ensemble imputation matrix is obtained from averaging results of six imputation algorithms: top 3 teams in challenge (spectroFM: Team DMIS_PTG; RegImpute: Team Jeremy Jacobsen; Birnn: Team BruinGo) and 3 baseline algorithms (KNN, missForest, ADMIN). Bootstrap aggregating (bagging) is also adopted to improve unstable estimation and accuracy of machine learning algorithms.
+
+In the output option of this function, it provides the user the flexibility to select imputation matrix from the ensemble method or each individual algorithm:
+ - "KNN": k nearest neighbor imputation
+ - "MissForest": nonparametric Missing Value Imputation using Random Forest 
+  - "ADMIN": abundance dependent missing imputation
    - "Brinn": imputation using IRNN-SCAD algorithm 
    - "SpectroFM": imputation using matrix factorization 
    -  "RegImpute": imputation using Glmnet ridge regression  
-   -  "Ensemble": aggregation of the 6 methods
-   using simple average.
+   -  "Ensemble": average of the 6 methods
+
 
 ## Usage
 ```
